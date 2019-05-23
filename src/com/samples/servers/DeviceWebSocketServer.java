@@ -17,14 +17,17 @@ public class DeviceWebSocketServer {
 
 	@OnClose
 	public void close(Session session) {
+		System.out.println("** closed **");
 	}
 
 	@OnError
 	public void onError(Throwable error) {
+		System.out.println(error.getMessage());
 	}
 
 	@OnMessage
 	public void handleMessage(String message, Session session) {
+		System.out.println("** Received message  **");
 	}
 
 }
